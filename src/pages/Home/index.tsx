@@ -1,5 +1,6 @@
+import { ButtonBox, Container, SubTitle, Title } from "./styles";
 const Home: React.FC = () => {
-  return <div>index</div>;
+  return <Container>index</Container>;
 };
 
 export default Home;
