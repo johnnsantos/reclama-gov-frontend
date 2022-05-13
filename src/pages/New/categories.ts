@@ -5,18 +5,18 @@ interface categoriesInterface {
 }
 
 export const categories: categoriesInterface[] = [
-  { key: "basket", label: "Vestuário", url: "media/basket.png" },
-  { key: "gas", label: "Combustível", url: "media/gas.png" },
+  { key: "roads", label: "Estradas", url: "media/roads.png" },
+  { key: "homes", label: "Loteamento", url: "media/homes.png" },
   {
-    key: "hospital",
-    label: "Farmácia/Hospital",
-    url: "media/hospital.png",
+    key: "ilumination",
+    label: "Iluminação",
+    url: "media/ilumination.png",
   },
-  { key: "pet", label: "Pet Shop", url: "media/pet.png" },
+  { key: "water", label: "Esgoto", url: "media/water.png" },
   {
-    key: "restaurant",
-    label: "Restaurante",
-    url: "media/restaurant.png",
+    key: "security",
+    label: "Segurança",
+    url: "media/security.png",
   },
-  { key: "shopping", label: "Mercado", url: "media/shopping.png" },
+  { key: "fun", label: "Lazer", url: "media/fun.png" },
 ];

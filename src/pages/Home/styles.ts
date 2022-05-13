@@ -84,7 +84,7 @@ export const RightContainer = styled.div`
 `;
 
 export const Image = styled.img.attrs(() => ({
-  src: "home-image.svg",
+  src: "map.svg",
 }))`
   width: 60%;
   @media (max-width: 768px) {

@@ -1,14 +1,26 @@
-# Local Maps Stores - Front End
+# ReclamaGov - Front End
 
-Esta é uma aplicação React que cadastra e obtém estabelecimentos.
+Esta é uma aplicação React que cadastra pontos de melhoria necessários na cidade, para serem repassados à prefeitura.
 
-Desenvolvida com template Vite Typescript.
-React, Styled Components, Leaflet
+## Link do Figma
 
-## Install
+[Clique aqui](https://www.figma.com/file/cMUQjt5is0BkebFZJM97mn/Reclama-Gov?node-id=4%3A422)
+
+## Tecnologias utilizadas:
+
+- Vite para criação do projeto
+- React
+- TypeScript
+- React Router Dom
+- Styled Components
+- Leaflet
+
+## Instalação
 
     yarn install
 
-## Run the api
+## Rodar o projeto
 
     yarn dev
+
+Desenvolvido por [Johnnatan Santos](https://www.linkedin.com/in/johnnsantos/)

@@ -80,10 +80,10 @@ const New: React.FC = () => {
   return (
     <Container>
       <Form onSubmit={(e) => onSubmit(e)}>
-        <FormTitle>Cadastro do comércio local</FormTitle>
+        <FormTitle>Cadastro do ponto de melhoria</FormTitle>
         <Section>Dados</Section>
         <Input
-          label="Nome do local"
+          label="Referência do local (Ex Escola São Tomaz)"
           name="name"
           value={formValues.name}
           onChange={setFormValues}
@@ -95,7 +95,7 @@ const New: React.FC = () => {
           onChange={setFormValues}
         />
         <Input
-          label="Contato"
+          label="Contato para acompanhamento"
           name="contact"
           value={formValues.contact}
           onChange={setFormValues}
@@ -121,8 +121,8 @@ const New: React.FC = () => {
           {categories.map((category) => (
             <CategoryBox
               key={category.key}
-              onClick={(prev) =>
-                setFormValues({ ...prev, category: category.key })
+              onClick={() =>
+                setFormValues((prev) => ({ ...prev, category: category.key }))
               }
               isActive={formValues.category === category.key}
             >

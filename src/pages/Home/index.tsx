@@ -15,14 +15,14 @@ const Home: React.FC = () => {
   return (
     <Container>
       <LeftContainer>
-        <Title>Conheça os negócios locais da sua região</Title>
-        <SubTitle>Encontre no comércio local tudo o que precisa!</SubTitle>
+        <Title>Solicite serviços para a Prefeitura</Title>
+        <SubTitle>Aponte as necessidades de melhoria na sua região</SubTitle>
         <Link to="/new">
           <Button>
             <ButtonBox>
               <BsFillPlusCircleFill />
             </ButtonBox>
-            Quero cadastrar um comércio
+            Cadastre um ponto de melhoria
           </Button>
         </Link>
       </LeftContainer>

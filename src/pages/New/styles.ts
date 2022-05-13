@@ -51,10 +51,9 @@ export const CategoryContainer = styled.div`
 export const CategoryBox = styled.div<{ isActive: boolean }>`
   background-color: ${(props) =>
     props.isActive ? props.theme.white : props.theme.colors.background};
-
   border: ${(props) =>
     props.isActive ? `2px solid ${props.theme.colors.background}` : "none"};
-
+  box-sizing: border-box;
   border-radius: 8px;
   width: 160px;
   height: 160px;
@@ -67,6 +66,10 @@ export const CategoryBox = styled.div<{ isActive: boolean }>`
   margin: 10px;
 
   cursor: pointer;
+  &:hover {
+    filter: brightness(0.9);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const CategoryImage = styled.img`
