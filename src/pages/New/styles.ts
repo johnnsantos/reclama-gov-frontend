@@ -24,8 +24,8 @@ export const Form = styled.form`
 export const FormTitle = styled.h2`
   color: ${(props) => props.theme.colors.primary};
   font-size: 40px;
-
   padding-bottom: 30px;
+  font-weight: 600;
 `;
 
 export const MapContainer = styled(MapContainerLeaflet)`
@@ -43,9 +43,9 @@ export const Section = styled.p`
 
 export const CategoryContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 export const CategoryBox = styled.div<{ isActive: boolean }>`
@@ -72,6 +72,7 @@ export const CategoryBox = styled.div<{ isActive: boolean }>`
 export const CategoryImage = styled.img`
   width: 40px;
   height: 40px;
+  margin-bottom: 10px;
 `;
 
 export const ButtonContainer = styled.div`
