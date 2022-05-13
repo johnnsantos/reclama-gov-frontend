@@ -4,10 +4,12 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import NotFound from "./pages/404";
+import Header from "./components/Header";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

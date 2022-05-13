@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 7vh);
   background: url("./home-background.svg") no-repeat 700px bottom;
   background-color: ${(props) => props.theme.colors.background};
   display: flex;
