@@ -45,7 +45,7 @@ export const CategoryContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const CategoryBox = styled.div<{ isActive: boolean }>`
@@ -86,8 +86,12 @@ export const Button = styled.button`
   height: 50px;
   border: none;
   border-radius: 5px;
+  padding: 10px 30px;
+  /* position: relative; */
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.primary}99;
+    filter: opacity(0.9);
+    padding-top: 6px;
+    transition: all 0.2s ease-in-out;
   }
 `;
