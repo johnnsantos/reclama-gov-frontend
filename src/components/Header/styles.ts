@@ -1,3 +1,5 @@
+import React from "react";
+import { Link, LinkProps } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -37,5 +39,16 @@ export const MenuContainer = styled.div`
     li {
       margin: 0 20px;
     }
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.secondary};
+    transition: color 0.2s;
   }
 `;

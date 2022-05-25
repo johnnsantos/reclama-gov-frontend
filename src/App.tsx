@@ -9,8 +9,8 @@ import Header from "./components/Header";
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<New />} />

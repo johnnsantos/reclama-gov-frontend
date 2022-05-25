@@ -1,4 +1,10 @@
-import { Container, Logo, LogoContainer, MenuContainer } from "./styles";
+import {
+  Container,
+  Logo,
+  LogoContainer,
+  MenuContainer,
+  StyledLink,
+} from "./styles";
 
 const Header = () => {
   return (
@@ -7,11 +13,19 @@ const Header = () => {
         <Logo />
       </LogoContainer>
       <MenuContainer>
-        <ul>
-          <li>Home</li>
-          <li>Sobre</li>
-          <li>Contato</li>
-        </ul>
+        <nav>
+          <ul>
+            <li>
+              <StyledLink to="/">Home</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/">Sobre</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/">Contato</StyledLink>
+            </li>
+          </ul>
+        </nav>
       </MenuContainer>
     </Container>
   );
