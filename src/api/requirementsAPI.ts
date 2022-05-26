@@ -4,21 +4,24 @@ interface Requirement {
   local_name: string;
   description: string;
   category: string;
-  contact: number;
+  contact: string;
   lat: number;
   long: number;
-  coords: Array<number>;
 }
 
 export const insertNewRequirement = async (req: Requirement) => {
-  const response = await fetch(`${baseURL}/requirements`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(req),
-  });
-  return response.json();
+  try {
+    const response = await fetch(`${baseURL}/requirements`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(req),
+    });
+    return response;
+  } catch (error) {
+    return error;
+  }
 };
 
 export const getAllRequirements = async () => {

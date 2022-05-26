@@ -25,6 +25,7 @@ const Home: React.FC = () => {
             Cadastre um ponto de melhoria
           </Button>
         </Link>
+        <Link to="/requirements">Ver pontos de melhoria cadastrados</Link>
       </LeftContainer>
       <RightContainer>
         <Image />

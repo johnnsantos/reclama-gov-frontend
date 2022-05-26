@@ -84,6 +84,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
+  font-weight: bold;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
   height: 50px;

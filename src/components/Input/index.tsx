@@ -6,6 +6,7 @@ interface InputProps {
   type?: string;
   value: string;
   onChange: Function;
+  disabled?: boolean;
 }
 
 const Input = (props: InputProps) => {
@@ -13,6 +14,7 @@ const Input = (props: InputProps) => {
     <Container>
       <label htmlFor={props.name}>{props.label}</label>
       <InputStyled
+        disabled={props.disabled}
         required
         name={props.name}
         value={props.value}
