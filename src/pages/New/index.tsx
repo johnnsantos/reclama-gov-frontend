@@ -18,11 +18,12 @@ import { categories } from "./categories";
 import useGetLocation from "../../hooks/useGetLocation";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { insertNewRequirement } from "../../api/requirementsAPI";
 
 const New: React.FC = () => {
   const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
-    name: "",
+    local_name: "",
     description: "",
     contact: "",
     category: "",
@@ -31,25 +32,25 @@ const New: React.FC = () => {
 
   const onSubmit = async (e: Event) => {
     e.preventDefault();
-    const request = await fetch("ENDEREÇO", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...formValues,
-        latitude: formValues.coords[0],
-        longitude: formValues.coords[1],
-      }),
-    });
-
-    if (request.ok) {
-      toast("Cadastro realizado com sucesso!", {
-        type: "success",
-        autoClose: 2000,
-        onClose: () => navigate("/"),
+    const newRequirement = {
+      ...formValues,
+      lat: formValues.coords[0],
+      long: formValues.coords[1],
+    };
+    insertNewRequirement(newRequirement)
+      .then((res) => {
+        toast("Cadastro realizado com sucesso!", {
+          type: "success",
+          autoClose: 2000,
+          onClose: () => navigate("/"),
+        });
+      })
+      .catch((err) => {
+        toast("Houve um problema com o cadastro", {
+          type: "error",
+          autoClose: 2000,
+        });
       });
-    }
   };
 
   const location = useGetLocation();
@@ -84,8 +85,8 @@ const New: React.FC = () => {
         <Section>Dados</Section>
         <Input
           label="Referência do local (Ex Escola São Tomaz)"
-          name="name"
-          value={formValues.name}
+          name="local_name"
+          value={formValues.local_name}
           onChange={setFormValues}
         />
         <Input
