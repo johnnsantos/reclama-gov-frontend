@@ -1,3 +1,4 @@
+import React from "react";
 import Input from "../../components/Input";
 import {
   Button,
@@ -32,7 +33,7 @@ const New: React.FC = () => {
     coords: [0, 0],
   });
 
-  const onSubmit = async (e: Event) => {
+  const onSubmitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -89,7 +90,7 @@ const New: React.FC = () => {
 
   return (
     <Container>
-      <Form onSubmit={(e) => onSubmit(e)}>
+      <Form onSubmit={onSubmitHandler}>
         {isLoading ? (
           <Container style={{ height: "100vh" }}>
             <ReactLoading
