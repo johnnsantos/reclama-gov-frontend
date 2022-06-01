@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Container,
   Logo,
@@ -10,7 +11,9 @@ const Header = () => {
   return (
     <Container>
       <LogoContainer>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </LogoContainer>
       <MenuContainer>
         <nav>

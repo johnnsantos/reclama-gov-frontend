@@ -6,7 +6,7 @@ interface categoriesInterface {
 
 export const categories: categoriesInterface[] = [
   { key: "roads", label: "Estradas", url: "media/roads.png" },
-  { key: "homes", label: "Loteamento", url: "media/homes.png" },
+  { key: "home", label: "Loteamento", url: "media/homes.png" },
   {
     key: "ilumination",
     label: "Iluminação",

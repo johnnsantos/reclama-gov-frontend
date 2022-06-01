@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   height: 5vh;
   padding-top: 25px;
+  padding-bottom: 10px;
 `;
 
 export const LogoContainer = styled.div`
