@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -89,5 +90,16 @@ export const Image = styled.img.attrs(() => ({
   width: 60%;
   @media (max-width: 768px) {
     width: 80%;
+  }
+`;
+
+export const ListRequirements = styled(Link)`
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.primary};
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  &:hover {
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;

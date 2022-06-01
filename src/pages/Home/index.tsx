@@ -7,6 +7,7 @@ import {
   RightContainer,
   SubTitle,
   Title,
+  ListRequirements,
 } from "./styles";
 import { Link } from "react-router-dom";
 import { BsFillPlusCircleFill } from "react-icons/bs";
@@ -25,7 +26,9 @@ const Home: React.FC = () => {
             Cadastre um ponto de melhoria
           </Button>
         </Link>
-        <Link to="/requirements">Ver pontos de melhoria cadastrados</Link>
+        <ListRequirements to="/requirements">
+          Ver pontos de melhoria cadastrados
+        </ListRequirements>
       </LeftContainer>
       <RightContainer>
         <Image />
