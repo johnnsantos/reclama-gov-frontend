@@ -10,7 +10,11 @@ export const MapContainer = styled(MapContainerLeaflet)`
   }
 `;
 
-export const CustomMarker = styled.div`
+interface MarkerProps {
+  url: string;
+}
+
+export const CustomMarker = styled.div<MarkerProps>`
   background: lightgreen url(${(props) => props.url}) no-repeat center;
   background-size: 25px;
   border-radius: 50%;

@@ -6,8 +6,17 @@ import { Marker, Popup, TileLayer } from "react-leaflet";
 import useGetLocation from "../../hooks/useGetLocation";
 import { getAllRequirements } from "../../api/requirementsAPI";
 
+interface urlsInterface {
+  roads: string;
+  water: string;
+  fun: string;
+  home: string;
+  security: string;
+  ilumination: string;
+}
+
 const getIconByCategory = (category: string) => {
-  const urls = {
+  const urls: urlsInterface = {
     roads: "/media/roads.png",
     water: "/media/water.png",
     fun: "/media/fun.png",
@@ -16,9 +25,30 @@ const getIconByCategory = (category: string) => {
     ilumination: "/media/ilumination.png",
   };
 
-  const iconMarkup = renderToStaticMarkup(
-    <CustomMarker url={urls[category]} alt="icon" />
-  );
+  let iconURL: string = "";
+
+  switch (category) {
+    case "roads":
+      iconURL = urls.roads;
+      break;
+    case "water":
+      iconURL = urls.water;
+      break;
+    case "fun":
+      iconURL = urls.fun;
+      break;
+    case "home":
+      iconURL = urls.home;
+      break;
+    case "security":
+      iconURL = urls.security;
+      break;
+    case "ilumination":
+      iconURL = urls.ilumination;
+      break;
+  }
+
+  const iconMarkup = renderToStaticMarkup(<CustomMarker url={iconURL} />);
   const customMarkerIcon = divIcon({
     html: iconMarkup,
   });
